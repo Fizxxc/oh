@@ -1,0 +1,143 @@
+/* Menggunakan font yang lebih seram */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Creepster', cursive;
+    background: #1c1c1c;
+    color: #f8f8f8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#countdown-container {
+    border: 4px solid #ff3333;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6);
+    animation: pulse 1.5s ease-out infinite alternate;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff5555;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+}
+
+#days, #hours, #minutes, #seconds {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 15px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #ff7777;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5);
+}
+
+.notes {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #ff3333;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Footer Style */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+#footer-link {
+    font-size: 1rem;
+    color: #e60000;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+}
+
+#footer-link:hover {
+    color: #ff6347;
+    text-shadow: 2px 2px 10px rgba(255, 99, 71, 1);
+}
+
+footer #author-name {
+    font-weight: bold;
+    color: #ff3333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(-10px); }
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+#countdown-container .blood-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.giphy.com/media/zzXqrb8IS5F2p6GrZf/giphy.gif') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
